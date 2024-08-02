@@ -1,5 +1,6 @@
 import TasksHTML
 import OGE.Task_1.one as one_task
+import OGE.Task_3.three as three_task
 
 
 class TasksOGE:
@@ -25,3 +26,14 @@ class TasksOGE:
         :return: Список заданий
         """
         return [one_task.Task1(tasks_type) for _ in range(k)]
+
+    def get_tasks_3(self, k: int, tasks_type: int) -> list:
+        """
+        Получить список с заданиями вида task_type:
+        1 -
+        2 -
+        :param k: Количество заданий
+        :param tasks_type: Тип заданий
+        :return: Список заданий
+        """
+        return [three_task.Task3(tasks_type) for _ in range(k)]

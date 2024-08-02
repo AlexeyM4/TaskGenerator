@@ -5,7 +5,7 @@ import math
 
 
 class Task1:
-    def __init__(self, type_task):
+    def __init__(self, task_type: int):
         """
         Получить задание вида task_type:
         1 - Найти вычеркнутое слово
@@ -18,15 +18,15 @@ class Task1:
         self.number = 1
         self.exam = 'OGE'
 
-        if type_task == 1:
+        if task_type == 1:
             self.text, self.answer = self.__get_task_type_one()
-        elif type_task == 2:
+        elif task_type == 2:
             self.text, self.answer = self.__get_task_type_two()
-        elif type_task == 3:
+        elif task_type == 3:
             self.text, self.answer = self.__get_task_type_three()
-        elif type_task == 4:
+        elif task_type == 4:
             self.text, self.answer = self.__get_task_type_four()
-        elif type_task == 5:
+        elif task_type == 5:
             self.text, self.answer = self.__get_random_task()
         else:
             self.text, self.answer = None, None

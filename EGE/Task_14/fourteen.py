@@ -3,7 +3,7 @@ import random as rnd
 
 
 class Task14:
-    def __init__(self, type_task):
+    def __init__(self, task_type: int):
         """
         Получить задание вида task_type:
         1 - Посчитать цифры
@@ -19,19 +19,19 @@ class Task14:
         self.number = 14
         self.exam = 'EGE'
 
-        if type_task == 1:
+        if task_type == 1:
             self.text, self.answer = self.__get_task_type_one()
-        elif type_task == 2:
+        elif task_type == 2:
             self.text, self.answer = self.__get_task_type_two()
-        elif type_task == 3:
+        elif task_type == 3:
             self.text, self.answer = self.__get_task_type_three(False, True)
-        elif type_task == 4:
+        elif task_type == 4:
             self.text, self.answer = self.__get_task_type_three(True, True)
-        elif type_task == 5:
+        elif task_type == 5:
             self.text, self.answer = self.__get_task_type_three(False, False)
-        elif type_task == 6:
+        elif task_type == 6:
             self.text, self.answer = self.__get_task_type_three(True, False)
-        elif type_task == 7:
+        elif task_type == 7:
             self.text, self.answer = self.__get_random_task()
         else:
             self.text, self.answer = None, None
