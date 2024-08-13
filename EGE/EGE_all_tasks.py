@@ -1,5 +1,6 @@
 import TasksHTML
 import EGE.Task_14.fourteen as fourteen_task
+import EGE.Task_22.twenty_two as twenty_two
 
 
 class TasksEGE:
@@ -27,3 +28,16 @@ class TasksEGE:
         :return: Список заданий
         """
         return [fourteen_task.Task14(tasks_type) for _ in range(k)]
+
+    def get_tasks_22(self, k: int, tasks_type: int) -> list:
+        """
+        Получить список с заданиями вида task_type:
+        1 - Определить минимальоне время при параллельном выполнении процессов
+        2 - Определить максимальное время выполнения всех процессов
+        3 - Определить минимальоне время при наличии задержки между процессами
+        4 -
+        :param k: Количество заданий
+        :param tasks_type: Тип заданий
+        :return: Список заданий
+        """
+        return [twenty_two.Task22(tasks_type) for _ in range(k)]

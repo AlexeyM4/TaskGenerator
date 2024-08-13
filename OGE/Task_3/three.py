@@ -20,3 +20,4 @@ class Task3:
     def __get_task_type_one(self):
 
         return 'Some text', 0
+    

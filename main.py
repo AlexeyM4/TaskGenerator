@@ -14,9 +14,16 @@ if __name__ == '__main__':
 
     # tasks_EGE.to_html(tasks_fourteen)
 
-    tasks_one = tasks_OGE.get_tasks_3(1, 1)
-    for task in tasks_one:
-        print(task.text_without_tags)
-        print(task.answer)
+    # tasks_one = tasks_OGE.get_tasks_3(1, 1)§
+    # for task in tasks_one:
+    #     print(task.text_without_tags)
+    #     print(task.answer)
 
     # tasks_OGE.to_html(tasks_one)
+
+    tasks22 = tasks_EGE.get_tasks_22(2, 3)
+    # for task in tasks22:
+    #     print(task.text_without_tags)
+    #     print(task.answer)
+    # tasks_EGE.to_html(tasks22)
+
