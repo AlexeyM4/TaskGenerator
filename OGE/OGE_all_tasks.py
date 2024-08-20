@@ -15,7 +15,7 @@ class TasksOGE:
 
     def get_tasks_1(self, k: int, tasks_type: int) -> list:
         """
-        Получить список с заданиями вида task_type:
+        Получить список с заданиями вида tasks_type:
         1 - Найти вычеркнутое слово
         2 - Определить рзмер предложения
         3 - Определить информационный объём рассказа
@@ -27,13 +27,9 @@ class TasksOGE:
         """
         return [one_task.Task1(tasks_type) for _ in range(k)]
 
-    def get_tasks_3(self, k: int, tasks_type: int) -> list:
+    def get_tasks_3(self, k: int) -> list:
         """
-        Получить список с заданиями вида task_type:
-        1 -
-        2 -
         :param k: Количество заданий
-        :param tasks_type: Тип заданий
         :return: Список заданий
         """
-        return [three_task.Task3(tasks_type) for _ in range(k)]
+        return [three_task.Task3() for _ in range(k)]

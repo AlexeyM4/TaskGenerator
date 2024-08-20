@@ -15,7 +15,7 @@ class TasksHTML:
 
         text_tasks = ''
         for task in tasks:
-            text_tasks += f'{task.text}<hr>'
+            text_tasks += f'{task.text}<hr>\n'
 
         text = f'''<!DOCTYPE html>
 <html lang="en">
