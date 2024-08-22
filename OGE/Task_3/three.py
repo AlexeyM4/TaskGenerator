@@ -3,11 +3,24 @@ import random as rnd
 
 
 class Task3:
-    def __init__(self):
+    def __init__(self, task_type: int):
+        """
+        Получить задание вида task_type:
+        1 - Высказывание истинно
+        2 - Высказывание ложно
+        3 - Случайное задание
+        :param task_type: Тип задания
+        """
         self.number = 3
         self.exam = 'OGE'
 
-        self.text, self.answer = self.__get_task_type_one()
+        if task_type == 1:
+            self.text, self.answer = self.__get_task_type_one('истинно')
+        elif task_type == 2:
+            self.text, self.answer = self.__get_task_type_one('ложно')
+        elif task_type == 3:
+            lg = rnd.choice(['истинно', 'ложно'])
+            self.text, self.answer = self.__get_task_type_one(lg)
 
         if self.text is not None:
             self.text_without_tags = self.__remove_all_tags(self.text)
@@ -18,10 +31,10 @@ class Task3:
         soup = BeautifulSoup(html, 'html.parser')
         return soup.get_text()
 
-    def __get_task_type_one(self):
+    def __get_task_type_one(self, cond_bool: str):
         a = rnd.randint(2, 100)
         b = rnd.randint(2, 100)
-        cond_bool = rnd.choice(['истинно', 'ложно'])
+
 
         expression = self.__get_expression()
         expc = f'НЕ ({expression})' if cond_bool == 'ложно' else expression
@@ -54,7 +67,7 @@ class Task3:
         text = f'<div><p>{cond}:</p> {expression}</div>'
         text = text.replace('НЕ', '<b>НЕ</b>')
         text = text.replace('ИЛИ', '<b>ИЛИ</b>')
-        text = text.replace('И', '<b>И</b>')
+        text = text.replace(' И ', ' <b>И</b> ')
         text = text.replace('(', '<i>(')
         text = text.replace(')', ')</i>')
 

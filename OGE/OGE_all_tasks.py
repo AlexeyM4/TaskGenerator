@@ -27,9 +27,14 @@ class TasksOGE:
         """
         return [one_task.Task1(tasks_type) for _ in range(k)]
 
-    def get_tasks_3(self, k: int) -> list:
+    def get_tasks_3(self, k: int, tasks_type: int) -> list:
         """
+        Получить задание вида task_type:
+        1 - Высказывание истинно
+        2 - Высказывание ложно
+        3 - Случайное задание
         :param k: Количество заданий
+        :param tasks_type: Тип заданий
         :return: Список заданий
         """
-        return [three_task.Task3() for _ in range(k)]
+        return [three_task.Task3(tasks_type) for _ in range(k)]
